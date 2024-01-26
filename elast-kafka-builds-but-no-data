@@ -1,0 +1,15 @@
+{
+    "name": "flash-deck-connector",
+    "config": {
+  "connector.class":"io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+  "connection.url" :"http://elasticsearch:9200",
+  "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+  "value.converter.schemas.enable": "true",
+  "type.name": "test-type",
+  "topics": "flash-deck",
+  "key.ignore": "true",
+  "schema.ignore": "true",
+  "errors.tolerance": "all",
+  "name": "flash-deck-connector"
+    }
+}

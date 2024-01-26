@@ -1,0 +1,16 @@
+{
+
+    "name": "flash-connector",
+    "config": {
+        "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+        "tasks.max": "1",
+        "topics": "flash-deck-comment",
+        "schema.ignore": "true",
+        "key.converter":"org.apache.kafka.connect.storage.StringConverter",
+        "key.ignore": "true",
+        "value.converter.schemas.enable": "false",
+        "connection.url": "http://elasticsearch:9200",
+        "type.name": "test-type",
+        "name": "flash-connector"
+    }
+}
