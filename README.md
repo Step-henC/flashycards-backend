@@ -13,68 +13,10 @@ Check `localhost:9021` for confluence. Create an topic named `flash-deck` and an
 Back in root directory (`cd ..`), command line: `go run server.go` and check browser for `localhost:8080`.
 
 Below are GraphQL requests to help get started:
+![Screenshot (13)](https://github.com/Step-henC/flashycards-backend/assets/98792412/421ddf8b-aa85-4d90-ab59-896611eee047)
 
-   `mutation CreatUser($email: String!, $password: String!) {
-      createUser(email: $email, password: $password) {
-        email,
-        password,
-        id,
-      }
-      
-    }
-  
-  mutation CreateDeck {
-    createDeck(input: {
-      userId: "get uuid from create user",
-      id:"",
-      name: "create new quiz",
-      lastUpdate: "10-24-2025",
-      dateCreated: "10-22-1992",
-      flashcards: [{front: "hello", back: "from the other side"}, {front: "guess who's back", back: "back again"}]
-    }) {
-      id,
-      userId,
-      lastUpdate,
-      flashcards{
-        front,
-        back
-      },
-      name,
-    }
-  }
-  
-   query GetDeckByUser {
-    getDeckByUser(userId: "get UUID from create user") {
-      id,
-      dateCreated,
-      lastUpdate,
-      flashcards {
-        front, back
-      },
-      name,
-      userId
-    }
-  }
-  
-  subscription Comment {
-    comment {
-      id, userId, comment
-    }
-  }
-  
-  query GetDeckById {
-    getDeckById(id: "get deck id from create deck") {
-      name,
-      userId,
-      id,
-      flashcards {
-        front, back
-      }
-    }
-  }
-mutation DeleteUser($userId: String!){
-  deleteUser(userId: $userId)
-}`
+![Screenshot (14)](https://github.com/Step-henC/flashycards-backend/assets/98792412/aa5cd79a-1160-4eea-b7d4-6aeca6d7a58a)
+
 
 ## Considerations
 
